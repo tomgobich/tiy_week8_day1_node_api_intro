@@ -42,7 +42,6 @@
 		// Abstract: Deletes a user
 		// ------------------------------------------------------------
 		var deleteUser = function deleteUser(userID) {
-			console.log(userID);
 			var promise = $http({
 				method: 'DELETE',
 				url: 'http://localhost:3000/api/deleteUser/' + userID

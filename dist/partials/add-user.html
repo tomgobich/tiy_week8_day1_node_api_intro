@@ -24,13 +24,15 @@
 			</div>
 		</div>
 
-		<input 	type="checkbox"
-				class="checkbox-input"
-				name="jsFan"
-				ng-model="controller.postData.jsFan"
-				value="Are you a JavaScript fan?"
-				checked>
-		<label for="jsFan" class="checkbox-label">Are you a JavaScript fan?</label>
+		<label class="checkbox-label">
+			<input 	type="checkbox"
+					class="checkbox-input"
+					name="jsFan"
+					ng-model="controller.postData.jsFan"
+					value="Are you a JavaScript fan?"
+					checked>
+			Are you a JavaScript fan?
+		</label>
 
 		<button type="submit" class="btn btn-post">Add User</button>
 	</form>
