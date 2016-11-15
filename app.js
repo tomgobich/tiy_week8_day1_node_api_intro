@@ -3,7 +3,9 @@ const cors 			= require('cors');
 const bodyParser 	= require('body-parser');
 const chalk			= require('chalk');
 
-const app 			= express()
+const app 			= express();
+
+const port = process.env.PORT || 3000;
 
 
 
@@ -90,6 +92,6 @@ app.delete('/api/deleteUser/:userID', function(req,res)
 	}
 });
 
-app.listen(3000, function () {
-  console.log('Server running on port 3000!');
+app.listen(port, function () {
+  console.log('Server running on port ' + port);
 });

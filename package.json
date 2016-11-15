@@ -1,11 +1,11 @@
 {
-  "name": "",
+  "name": "TIY Week 8 Day 1 Node API Introduction",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "jest"
-  },
+     "start": "node app.js"
+   },
   "repository": {
     "type": "git",
     "url": ""
