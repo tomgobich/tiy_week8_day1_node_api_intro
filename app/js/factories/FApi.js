@@ -51,7 +51,6 @@
 			// ------------------------------------------------------------
 			const deleteUser = function(userID)
 			{
-				console.log(userID);
 				let promise = $http({
 					method: 'DELETE',
 					url: `http://localhost:3000/api/deleteUser/${userID}`,
