@@ -13,7 +13,7 @@
 		var getAllUsers = function getAllUsers() {
 			var promise = $http({
 				method: 'GET',
-				url: 'http://localhost:3000/api/'
+				url: 'http://localhost:3000/api/users'
 			});
 
 			return promise;
@@ -24,14 +24,21 @@
 		// Abstract: Adds a new user
 		// ------------------------------------------------------------
 		var addNewUser = function addNewUser(user) {
+			user.userID = Date.now() + Math.floor(Math.random() * (9999 - 1000) + 1000);
+
+			// Validate jsFan boolean
+			if (user.jsFan !== true) {
+				user.jsFan = false;
+			}
+
+			var postObject = {
+				user: user
+			};
+
 			var promise = $http({
 				method: 'POST',
-				data: {
-					name: user.name,
-					age: user.age,
-					jsFan: user.jsFan
-				},
-				url: 'http://localhost:3000/api/addUser'
+				data: postObject,
+				url: 'http://localhost:3000/api/users'
 			});
 
 			return promise;
@@ -44,7 +51,7 @@
 		var deleteUser = function deleteUser(userID) {
 			var promise = $http({
 				method: 'DELETE',
-				url: 'http://localhost:3000/api/deleteUser/' + userID
+				url: 'http://localhost:3000/api/users/' + userID
 			});
 
 			return promise;

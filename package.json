@@ -15,7 +15,7 @@
   "bugs": {
     "url": ""
   },
-  "homepage": "",
+  "homepage": "dist/index.html",
   "devDependencies": {
     "babel-preset-es2015": "^6.16.0",
     "browser-sync": "^2.17.0",

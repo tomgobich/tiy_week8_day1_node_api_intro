@@ -3,14 +3,14 @@
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
-$color-background: 	#E6E6E6;
-$color-alt-background: #055A5B;
-$color-border: #DDD;
-$color-link: #4078C0;
-$color-text: darken($color-alt-background, 6);
-$color-text-light: #767676;
-$color-success: #75C759;
-$color-error:	#DA4453;
+$color-background: 		#E6E6E6;
+$color-alt-background: 	#055A5B;
+$color-border: 			#DDD;
+$color-link: 			#4078C0;
+$color-text: 			darken($color-alt-background, 6);
+$color-text-light: 		#767676;
+$color-success: 		#75C759;
+$color-error:			#DA4453;
 
 $border-radius-small: 3px;
 $border-radius-large: 6px;
@@ -215,7 +215,6 @@ $deleteWidth: 118px;
 		color: rgba($color-text, 0.6);
 		border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 		overflow: hidden;
-		transition: color .3s ease;
 		position: relative;
 
 		&:hover {
@@ -234,14 +233,14 @@ $deleteWidth: 118px;
 		.body {
 			position: relative;
 			left: 0;
-			transition: all .3s ease;
+			transition: left .3s ease;
 
 			&.delete-user {
 				width: $deleteWidth;
 				color: $color-error;
 				position: absolute;
 				left: -33.334%;
-				transition: all .3s ease;
+				transition: left .3s ease;
 				cursor: pointer;
 			}
 		}

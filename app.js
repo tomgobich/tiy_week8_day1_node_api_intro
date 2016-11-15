@@ -23,7 +23,7 @@ let users = [];
 
 
 
-app.get('/api/', function (req, res)
+app.get('/api/users', function (req, res)
 {
 	// Return back users as JSON
 	res.json(users);
@@ -31,21 +31,10 @@ app.get('/api/', function (req, res)
 
 
 
-app.post('/api/addUser', function (req, res)
+app.post('/api/users', function (req, res)
 {
-	// Build new user object using data sent in
-	let newUser = {
-		userID: Date.now() + Math.floor(Math.random() * (9999 - 1000) + 1000),
-		name: 	req.body.name,
-		age: 	req.body.age,
-		jsFan: 	req.body.jsFan
-	}
-
-	// Validate jsFan boolean
-	if(newUser.jsFan !== true)
-	{
-		newUser.jsFan = false;
-	}
+	// Get user passed in
+	let newUser = req.body.user;
 
 	console.log(chalk.green( newUser.name + ' was added to users'));
 
@@ -58,7 +47,7 @@ app.post('/api/addUser', function (req, res)
 
 
 
-app.delete('/api/deleteUser/:userID', function(req,res)
+app.delete('/api/users/:userID', function(req,res)
 {
 	// Get the ID passed in
 	let userID 		= req.params.userID,
